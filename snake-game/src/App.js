@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Snake from "./Snake";
 import Food from "./Food";
+import Header from "./Header";
 
 const getRandomCoordinates = () => {
   let min = 1;
@@ -19,7 +20,7 @@ const initialState = {
     [2, 0],
   ],
 };
-
+let top = 0;
 class App extends Component {
   state = initialState;
 
@@ -123,16 +124,23 @@ class App extends Component {
     }
   }
 
+  topScore() {
+    if (this.state.snakeDots.length > top) top = this.state.snakeDots.length;
+  }
   onGameOver() {
     alert(`Game Over. Snake length is ${this.state.snakeDots.length}`);
     this.setState(initialState);
+    this.topScore();
   }
 
   render() {
     return (
-      <div className="game-area">
-        <Snake snakeDots={this.state.snakeDots} />
-        <Food dot={this.state.food} />
+      <div>
+        <Header top={top} />
+        <div className="game-area">
+          <Snake snakeDots={this.state.snakeDots} />
+          <Food dot={this.state.food} />
+        </div>
       </div>
     );
   }

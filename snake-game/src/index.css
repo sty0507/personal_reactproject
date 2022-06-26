@@ -23,3 +23,7 @@
   border: 1px solid #fff;
   z-index: 1;
 }
+.top_score {
+  position: absolute;
+  margin-left: 5%;
+}
