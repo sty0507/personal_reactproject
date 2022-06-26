@@ -1,0 +1,2 @@
+.game-area{border:2px solid #000;height:600px;margin:50px auto;position:relative;width:600px}.snake-dot{background-color:#000;z-index:2}.snake-dot,.snake-food{border:1px solid #fff;height:2%;position:absolute;width:2%}.snake-food{background:red;z-index:1}.top_score{margin-left:5%;position:absolute}
+/*# sourceMappingURL=main.be0d2b0e.css.map*/
